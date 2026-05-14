@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "name": "Solution (.NET)",
+      "path": "./backend"
+    },
+    {
+      "name": "Admin Portal (Angular)",
+      "path": "./frontend/admin-portal"
+    },
+    {
+      "name": "Customer Portal (Angular)",
+      "path": "./frontend/customer-portal"
+    },
+    {
+      "name": "Containerization",
+      "path": "./docker"
+    }
+  ],
+  "settings": {
+    "dotnet.defaultSolution": "OnBoarding.slnx"
+  }
+}
