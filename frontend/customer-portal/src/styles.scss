@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+}
+
+.register-header {
+  background: linear-gradient(135deg, #042c53 0%, #0c447c 100%);
+  padding: 40px 60px;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  p { font-size: 14px; color: rgba(255,255,255,0.65); }
+}
+
+.register-body {
+  background: #f8faff;
+  padding: 40px 60px;
+  min-height: calc(100vh - 280px);
+}
+
+.register-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.form-card {
+  background: #fff;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+.form-row {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  &.cols-2 { grid-template-columns: 1fr 1fr; }
+  &.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  &.col-1-2 { grid-template-columns: 1fr 2fr; }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input, select {
+    height: 42px;
+    border-radius: 8px;
+    border: 0.5px solid #ddd;
+    padding: 0 14px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    width: 100%;
+
+    &:focus {
+      border-color: #0c447c;
+      box-shadow: 0 0 0 3px rgba(12, 68, 124, 0.08);
+    }
+
+    &::placeholder { color: #bbb; }
+  }
+
+  .field-error {
+    font-size: 11px;
+    color: #c0392b;
+    margin-top: 2px;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+
+  .step-info {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .actions-right {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-back {
+    height: 42px;
+    padding: 0 24px;
+    border-radius: 8px;
+    background: transparent;
+    border: 0.5px solid #ddd;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover { border-color: #999; color: #333; }
+  }
+
+  .btn-next {
+    height: 42px;
+    padding: 0 32px;
+    border-radius: 8px;
+    background: #0c447c;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    &:hover { background: #185fa5; }
+  }
+}

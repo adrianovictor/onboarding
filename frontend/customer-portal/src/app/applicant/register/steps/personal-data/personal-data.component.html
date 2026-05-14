@@ -1,0 +1,51 @@
+<div class="form-card">
+  <p class="form-title">Informações pessoais</p>
+  <form [formGroup]="form">
+    <div class="form-row cols-2">
+      <div class="field">
+        <label>Nome completo</label>
+        <input formControlName="fullName" placeholder="Seu nome completo">
+        @if (isInvalid('fullName')) {
+          <span class="field-error">Nome é obrigatório</span>
+        }
+      </div>
+      <div class="field">
+        <label>CPF</label>
+        <input formControlName="cpf" placeholder="000.000.000-00">
+        @if (isInvalid('cpf')) {
+          <span class="field-error">CPF é obrigatório</span>
+        }
+      </div>
+    </div>
+    <div class="form-row cols-2">
+      <div class="field">
+        <label>Data de nascimento</label>
+        <input type="date" formControlName="birthDate">
+      </div>
+      <div class="field">
+        <label>Nome da mãe</label>
+        <input formControlName="motherName" placeholder="Nome completo da mãe">
+      </div>
+    </div>
+    <div class="form-row cols-2">
+      <div class="field">
+        <label>E-mail</label>
+        <input type="email" formControlName="email" placeholder="seu@email.com">
+        @if (isInvalid('email')) {
+          <span class="field-error">E-mail inválido</span>
+        }
+      </div>
+      <div class="field">
+        <label>Telefone</label>
+        <input formControlName="phone" placeholder="(00) 00000-0000">
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="form-actions">
+  <span class="step-info">Passo 1 de 5</span>
+  <div class="actions-right">
+    <button class="btn-next" (click)="continue()">Continuar →</button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="form-card">
+  <p class="form-title">Renda e ocupação</p>
+  <form [formGroup]="form">
+    <div class="form-row cols-2">
+      <div class="field">
+        <label>Ocupação</label>
+        <select formControlName="occupation">
+          <option value="">Selecione</option>
+          <option>Assalariado</option>
+          <option>Autônomo</option>
+          <option>Empresário</option>
+          <option>Aposentado</option>
+          <option>Estudante</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Renda mensal</label>
+        <input formControlName="monthlyIncome" placeholder="R$ 0,00">
+      </div>
+    </div>
+    <div class="form-row cols-2">
+      <div class="field">
+        <label>Empresa / Empregador</label>
+        <input formControlName="employer" placeholder="Nome da empresa">
+      </div>
+      <div class="field">
+        <label>Patrimônio estimado</label>
+        <input formControlName="estimatedAssets" placeholder="R$ 0,00">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="field">
+        <label>Pessoa Politicamente Exposta (PEP)?</label>
+        <select formControlName="isPep">
+          <option value="">Selecione</option>
+          <option value="no">Não sou PEP</option>
+          <option value="yes">Sou PEP</option>
+          <option value="related">Tenho relacionamento com PEP</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="form-actions">
+  <span class="step-info">Passo 3 de 5</span>
+  <div class="actions-right">
+    <button class="btn-back" (click)="back.emit()">← Voltar</button>
+    <button class="btn-next" (click)="continue()">Continuar →</button>
+  </div>
+</div>

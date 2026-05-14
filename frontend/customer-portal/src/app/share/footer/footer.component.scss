@@ -1,0 +1,25 @@
+.footer {
+  background: #042c53;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+  }
+
+  .links {
+    display: flex;
+    gap: 18px;
+
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 11px;
+      text-decoration: none;
+
+      &:hover { color: rgba(255, 255, 255, 0.8); }
+    }
+  }
+}

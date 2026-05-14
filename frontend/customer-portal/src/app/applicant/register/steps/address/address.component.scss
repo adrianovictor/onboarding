@@ -1,0 +1,29 @@
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.upload-area {
+  border: 1.5px dashed #ddd;
+  border-radius: 12px;
+  padding: 36px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  color: #999;
+  font-size: 13px;
+
+  &:hover { border-color: #0c447c; color: #0c447c; background: #f8faff; }
+
+  &.uploaded {
+    border-color: #0f6e56;
+    background: #f0faf6;
+    color: #0f6e56;
+  }
+
+  .upload-icon { font-size: 28px; display: block; margin-bottom: 8px; }
+  .upload-hint { font-size: 11px; margin-top: 4px; color: #bbb; }
+  .upload-check { font-size: 28px; display: block; margin-bottom: 8px; }
+  .upload-name { font-size: 12px; word-break: break-all; }
+}

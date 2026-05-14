@@ -1,0 +1,52 @@
+<div class="form-card">
+  <p class="form-title">Endereço residencial</p>
+  <form [formGroup]="form">
+    <div class="form-row col-1-2">
+      <div class="field">
+        <label>CEP</label>
+        <input formControlName="zipCode" placeholder="00000-000">
+      </div>
+      <div class="field">
+        <label>Logradouro</label>
+        <input formControlName="street" placeholder="Rua, Avenida...">
+      </div>
+    </div>
+    <div class="form-row cols-3">
+      <div class="field">
+        <label>Número</label>
+        <input formControlName="number" placeholder="123">
+      </div>
+      <div class="field">
+        <label>Complemento</label>
+        <input formControlName="complement" placeholder="Apto, Bloco...">
+      </div>
+      <div class="field">
+        <label>Bairro</label>
+        <input formControlName="neighborhood" placeholder="Seu bairro">
+      </div>
+    </div>
+    <div class="form-row cols-2">
+      <div class="field">
+        <label>Cidade</label>
+        <input formControlName="city" placeholder="Sua cidade">
+      </div>
+      <div class="field">
+        <label>Estado</label>
+        <select formControlName="state">
+          <option value="">Selecione</option>
+          @for (uf of ufs; track uf) {
+            <option [value]="uf">{{ uf }}</option>
+          }
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="form-actions">
+  <span class="step-info">Passo 2 de 5</span>
+  <div class="actions-right">
+    <button class="btn-back" (click)="back.emit()">← Voltar</button>
+    <button class="btn-next" (click)="continue()">Continuar →</button>
+  </div>
+</div>

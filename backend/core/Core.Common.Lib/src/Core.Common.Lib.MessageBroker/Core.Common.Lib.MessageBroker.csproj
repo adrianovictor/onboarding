@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Messaging\Adapters\" />
+    <Folder Include="Messaging\Enums\" />
+    <Folder Include="Messaging\Exceptions\" />
+    <Folder Include="Messaging\Extensions\" />
+    <Folder Include="Messaging\Factory\" />
+    <Folder Include="Messaging\Interfaces\" />
+    <Folder Include="Messaging\Options\" />
+    <Folder Include="Messaging\Publishing\" />
+    <Folder Include="Messaging\Workers\" />
+    <Folder Include="RabbitMQ\" />
+    <Folder Include="RabbitMQ\Common\" />
+    <Folder Include="RabbitMQ\Interfaces\" />
+    <Folder Include="RabbitMQ\Options\" />
+    <Folder Include="SNS\" />
+    <Folder Include="SNS\Extensions\" />
+    <Folder Include="SNS\Interfaces\" />
+    <Folder Include="SNS\Options\" />
+    <Folder Include="SQS\" />
+    <Folder Include="SQS\Common\" />
+    <Folder Include="SQS\Extensions\" />
+    <Folder Include="SQS\Interfaces\" />
+    <Folder Include="SQS\Options\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="4.0.3.17" />
+    <PackageReference Include="AWSSDK.SimpleNotificationService" Version="4.0.2.17" />
+    <PackageReference Include="AWSSDK.SQS" Version="4.0.2.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="RabbitMQ.Client" Version="7.2.1" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,60 @@
+<div class="form-card">
+  <p class="form-title">Revise seus dados</p>
+
+  @if (form(); as f) {
+    <div class="review-section">
+      <p class="review-group">Dados pessoais</p>
+      <div class="review-row">
+        <span>Nome</span><strong>{{ f.personalData?.fullName }}</strong>
+      </div>
+      <div class="review-row">
+        <span>CPF</span><strong>{{ f.personalData?.cpf }}</strong>
+      </div>
+      <div class="review-row">
+        <span>E-mail</span><strong>{{ f.personalData?.email }}</strong>
+      </div>
+      <div class="review-row">
+        <span>Telefone</span><strong>{{ f.personalData?.phone }}</strong>
+      </div>
+    </div>
+
+    <div class="review-section">
+      <p class="review-group">Endereço</p>
+      <div class="review-row">
+        <span>Logradouro</span>
+        <strong>{{ f.address?.street }}, {{ f.address?.number }}</strong>
+      </div>
+      <div class="review-row">
+        <span>Cidade / UF</span>
+        <strong>{{ f.address?.city }} — {{ f.address?.state }}</strong>
+      </div>
+    </div>
+
+    <div class="review-section">
+      <p class="review-group">Financeiro</p>
+      <div class="review-row">
+        <span>Ocupação</span><strong>{{ f.financialInfo?.occupation }}</strong>
+      </div>
+      <div class="review-row">
+        <span>Renda mensal</span>
+        <strong>{{ f.financialInfo?.monthlyIncome }}</strong>
+      </div>
+    </div>
+  }
+
+  <label class="terms">
+    <input type="checkbox" [(ngModel)]="accepted">
+    Li e aceito os <a href="#">Termos de Uso</a> e a
+    <a href="#">Política de Privacidade</a> do Banco Lumina.
+  </label>
+</div>
+
+<div class="form-actions">
+  <span class="step-info">Passo 5 de 5</span>
+  <div class="actions-right">
+    <button class="btn-back" (click)="back.emit()">← Voltar</button>
+    <button class="btn-next" (click)="onSubmit()" [disabled]="!accepted">
+      Enviar solicitação ✓
+    </button>
+  </div>
+</div>

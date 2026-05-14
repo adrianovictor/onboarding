@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/core/" />
+  <Folder Name="/core/Core.Common.Lib/" />
+  <Folder Name="/core/Core.Common.Lib/src/">
+    <Project Path="core/Core.Common.Lib/src/Core.Common.Lib.Api/Core.Common.Lib.Api.csproj" />
+    <Project Path="core/Core.Common.Lib/src/Core.Common.Lib.Application/Core.Common.Lib.Application.csproj" />
+    <Project Path="core/Core.Common.Lib/src/Core.Common.Lib.Domain/Core.Common.Lib.Domain.csproj" />
+    <Project Path="core/Core.Common.Lib/src/Core.Common.Lib.Http/Core.Common.Lib.Http.csproj" />
+    <Project Path="core/Core.Common.Lib/src/Core.Common.Lib.MessageBroker/Core.Common.Lib.MessageBroker.csproj" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/api/">
+    <Project Path="src/api/OnBoarding.Api/OnBoarding.Api.csproj" />
+    <Project Path="src/api/OnBoarding.Application/OnBoarding.Application.csproj" />
+    <Project Path="src/api/OnBoarding.Domain/OnBoarding.Domain.csproj" />
+    <Project Path="src/api/OnBoarding.Infrastructure/OnBoarding.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/consumer/">
+    <Project Path="src/consumer/OnBoarding.AccountHolderWorker/OnBoarding.AccountHolderWorker.csproj" />
+  </Folder>
+  <Folder Name="/src/publisher/">
+    <Project Path="src/publisher/OnBoarding.OutboxWorker/OnBoarding.OutboxWorker.csproj" />
+  </Folder>
+</Solution>

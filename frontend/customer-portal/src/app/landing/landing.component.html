@@ -1,0 +1,105 @@
+<app-navbar />
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Conta digital sem burocracia</p>
+      <h1>A conta que<br>trabalha por você</h1>
+      <p class="subtitle">
+        Abertura 100% digital, sem tarifas escondidas.<br>
+        Tudo pelo app, em menos de 5 minutos.
+      </p>
+      <div class="pills">
+        @for (pill of pills; track pill) {
+          <span>✓ {{ pill }}</span>
+        }
+      </div>
+      <button class="cta" routerLink="/open-account">
+        Abra sua conta grátis →
+      </button>
+    </div>
+
+    <div class="hero-visual">
+      <div class="card-mockup">
+        <div class="card-top">
+          <span class="card-bank">Neo Bank</span>
+          <span class="card-chip">▣</span>
+        </div>
+        <p class="card-number">•••• •••• •••• 4242</p>
+        <div class="card-bottom">
+          <div>
+            <p class="card-label">TITULAR</p>
+            <p class="card-value">João da Silva</p>
+          </div>
+          <div>
+            <p class="card-label">VALIDADE</p>
+            <p class="card-value">12/28</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        @for (stat of stats; track stat.label) {
+          <div class="stat">
+            <p class="stat-value">{{ stat.value }}</p>
+            <p class="stat-label">{{ stat.label }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="section-inner">
+    <p class="section-eyebrow">Vantagens</p>
+    <h2>Por que escolher o Neo Bank?</h2>
+    <div class="cards">
+      @for (benefit of benefits; track benefit.title) {
+        <div class="card">
+          <div class="card-icon-wrap" [style.background]="benefit.color + '18'"
+               [style.color]="benefit.color">
+            {{ benefit.icon }}
+          </div>
+          <h3>{{ benefit.title }}</h3>
+          <p>{{ benefit.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="section-inner">
+    <p class="section-eyebrow">Processo</p>
+    <h2>Abra sua conta em 4 passos</h2>
+    <div class="steps">
+      @for (step of steps; track step.title; let i = $index) {
+        <div class="step">
+          <div class="step-number">{{ i + 1 }}</div>
+          <div class="step-connector" *ngIf="i < steps.length - 1"></div>
+          <div class="step-icon">{{ step.icon }}</div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Pronto para começar?</h2>
+  <p>Abra sua conta agora e comece a usar em minutos.</p>
+  <button routerLink="/open-account">Abrir minha conta grátis →</button>
+</section>
+
+<div class="bank-info">
+  <p>
+    Neo Bank S.A. — CNPJ 00.000.000/0001-00 —
+    Instituição financeira autorizada pelo Banco Central do Brasil.
+    Depósitos garantidos pelo FGC até R$ 250.000 por CPF.
+    Ouvidoria: 0800 000 0000.
+  </p>
+</div>
+
+<app-footer />
